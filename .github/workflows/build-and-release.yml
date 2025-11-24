@@ -31,7 +31,7 @@ jobs:
             rid: linux-arm64
           - os: macos
             arch: x64
-            runner: macos-13
+            runner: macos-latest-large
             rid: osx-x64
           - os: macos
             arch: arm64
@@ -46,7 +46,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '10.x.x'
-        dotnet-quality: 'release'
+        dotnet-quality: 'ga'
 
     - name: Restore dependencies
       run: dotnet restore
